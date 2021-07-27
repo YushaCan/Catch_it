@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BasketMovement.cs" />
     <Compile Include="Assets\Scripts\StayOnBounds.cs" />
+    <Compile Include="Assets\Scripts\MarbleCollector.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
