@@ -20,7 +20,11 @@ MonoBehaviour:
     height: 780.8
   m_ShowMode: 4
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Title: Inspector
+=======
+  m_Title: Scene
+>>>>>>> Stashed changes
 =======
   m_Title: Scene
 >>>>>>> Stashed changes
@@ -153,7 +157,11 @@ MonoBehaviour:
   m_MaxSize: {x: 8001, y: 4021}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 88
+=======
+  controlID: 118
+>>>>>>> Stashed changes
 =======
   controlID: 118
 >>>>>>> Stashed changes
@@ -438,9 +446,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: {x: -2.4495182, y: 1.7828301, z: -9.326094}
     speed: 2
     m_Value: {x: -2.4495182, y: 1.7828301, z: -9.326094}
+=======
+    m_Target: {x: 0.02871966, y: -0.8761014, z: -5.0624967}
+    speed: 2
+    m_Value: {x: 0.02871966, y: -0.8761014, z: -5.0624967}
+>>>>>>> Stashed changes
 =======
     m_Target: {x: 0.02871966, y: -0.8761014, z: -5.0624967}
     speed: 2
@@ -493,9 +507,15 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Target: {x: -0.10929931, y: -0.16209424, z: 0.018247353, w: -0.9808562}
     speed: 2
     m_Value: {x: -0.10926474, y: -0.16204298, z: 0.018241582, w: -0.98054594}
+=======
+    m_Target: {x: 0.030034678, y: -0.01261126, z: -0.0016588777, w: 0.999899}
+    speed: 2
+    m_Value: {x: 0.027017998, y: -0.009602073, z: -0.0017770847, w: 0.99958724}
+>>>>>>> Stashed changes
 =======
     m_Target: {x: 0.030034678, y: -0.01261126, z: -0.0016588777, w: 0.999899}
     speed: 2
@@ -565,6 +585,9 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 50fbffff10420000
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
