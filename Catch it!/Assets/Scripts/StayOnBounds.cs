@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StayOnBounds : MonoBehaviour
 {
-    private float xBound = 2.06f;
+    private float xBound = 2.3f;
     void Update()
     {
         if(transform.position.x < -xBound)
