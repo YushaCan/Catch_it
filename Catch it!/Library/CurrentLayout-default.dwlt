@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -480,11 +480,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.039004605, y: -0.0077876854, z: 0.00046902153, w: -0.99952465}
     speed: 2
-    m_Value: {x: -0.03899071, y: -0.010782815, z: 0.00058584806, w: -0.9991812}
+    m_Value: {x: -0.039004605, y: -0.0077876854, z: 0.00046902153, w: -0.99952465}
   m_Size:
     m_Target: 0.6062178
     speed: 2
-    m_Value: 0.60621774
+    m_Value: 0.6062178
   m_Ortho:
     m_Target: 0
     speed: 2
