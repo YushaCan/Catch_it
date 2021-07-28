@@ -7,7 +7,7 @@ public class MarbleCollector : MonoBehaviour
     public static int pickedMarbles = 0;
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         pickedMarbles++;
         Debug.Log("Picked Marbles ==> " + pickedMarbles);
     }

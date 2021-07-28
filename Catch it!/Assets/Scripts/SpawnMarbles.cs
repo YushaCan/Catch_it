@@ -8,12 +8,34 @@ public class SpawnMarbles : MonoBehaviour
     private float spawnPosX = 2;
     private float spawnPosY = 6;
     private float spawnPosZ = -1.915f;
-    void Update()
+    private float waitingTime = 1f;
+    private float time;
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        time = 0f;
+    }
+    void FixedUpdate()
+    {
+        time += Time.deltaTime;
+        if(time >= 0.5f)
         {
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnPosX, spawnPosX), spawnPosY, spawnPosZ);
-            Instantiate(marblePrefab, spawnPos, marblePrefab.transform.rotation);
+            StartCoroutine(Spawn());
         }
+        
+    }
+
+    public IEnumerator Spawn()
+    {
+        yield return new WaitForSeconds(waitingTime);
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnPosX, spawnPosX), spawnPosY, spawnPosZ);
+        //Instantiate(marblePrefab, spawnPos, marblePrefab.transform.rotation);
+        GameObject marble = ObjectPooler.SharedInstance.GetPooledObject();
+        if (marble != null)
+        {
+            marble.transform.position = spawnPos;
+            marble.transform.rotation = marble.transform.rotation;
+            marble.SetActive(true);
+        }
+        
     }
 }

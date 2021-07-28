@@ -53,11 +53,14 @@
     <UnityVersion>2020.3.13f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SpawnMarbles.cs" />
     <Compile Include="Assets\Scripts\BasketMovement.cs" />
     <Compile Include="Assets\Scripts\MarbleCollector.cs" />
-    <Compile Include="Assets\Scripts\StayOnBounds.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
-    <Compile Include="Assets\Scripts\SpawnMarbles.cs" />
+    <Compile Include="Assets\Scripts\StayOnBounds.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\DestroyMarble.cs" />
+    <Compile Include="Assets\Scripts\PushOnSides.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
