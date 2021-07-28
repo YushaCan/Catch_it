@@ -16,9 +16,7 @@ sysinfo.txt
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 [Ee]xported[Oo]bj/
-.vs/
 /*.userprefs
-/*.csproj
 /*.pidb
 *.pidb.meta
 /*.suo
@@ -65,7 +63,6 @@ Catch it!/Library/Artifacts/a1/a1fe7e3dd48d035d5c860de8be7d7594
 Catch it!/.vs/Catch it!/v16/.suo
 *.csproj
 *.unity
-*.cs
 *.json
 *.json
 Catch it!/Library/ArtifactDB
