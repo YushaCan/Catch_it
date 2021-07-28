@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\MarbleCollector.cs" />
     <Compile Include="Assets\Scripts\StayOnBounds.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
+    <Compile Include="Assets\Scripts\SpawnMarbles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
