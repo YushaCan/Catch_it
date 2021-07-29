@@ -12,7 +12,6 @@ public class PushOnSides : MonoBehaviour
         marbleRigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         PushMarble();
