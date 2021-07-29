@@ -7,22 +7,23 @@ public class PushOnSides : MonoBehaviour
     private Rigidbody marbleRigidbody;
     private float xBound = 2.3f;
     [SerializeField] float forceSpeed;
-    void Start()
+    public void Start()
     {
         marbleRigidbody = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    public void Update()
     {
         PushMarble();
     }
     public void PushMarble()
     {
-        if(gameObject.transform.position.x > xBound)
+
+        if(transform.position.x > xBound)
         {
             marbleRigidbody.AddForce(Vector3.left * forceSpeed, ForceMode.Impulse);
         }
-        else if(gameObject.transform.position.x < -xBound)
+        else if(transform.position.x < -xBound)
         {
             marbleRigidbody.AddForce(Vector3.right * forceSpeed, ForceMode.Impulse);
         }
