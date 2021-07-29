@@ -6,17 +6,20 @@ public class BasketMovement : MonoBehaviour
 {
     public float swipeSpeed;
     Vector3 lastMousePosition;
+    public GameManager gameManager;
     private void OnMouseDown()
     {
         lastMousePosition = Input.mousePosition;
     }
     private void OnMouseDrag()
     {
-        Vector3 delta = Input.mousePosition - lastMousePosition;
-        Vector3 pos = transform.position;
-        pos.x += delta.x * swipeSpeed;
-        transform.position = pos;
-        lastMousePosition = Input.mousePosition;
+        if (!gameManager.gameOver)
+        {
+            Vector3 delta = Input.mousePosition - lastMousePosition;
+            Vector3 pos = transform.position;
+            pos.x += delta.x * swipeSpeed;
+            transform.position = pos;
+            lastMousePosition = Input.mousePosition;
+        }   
     }
-
 }
