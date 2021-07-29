@@ -10,6 +10,7 @@ public class SpawnMarbles : MonoBehaviour
     private float waitingTime = 0.2f;
     private float localTime;
     public float globalTime;
+    public GameManager gameManager;
     private void Start()
     {
         localTime = 0f;
@@ -19,7 +20,11 @@ public class SpawnMarbles : MonoBehaviour
     {
         globalTime += Time.deltaTime;
         localTime += Time.deltaTime;
-        TimeToSpawn();
+        if (!gameManager.gameOver)
+        {
+            TimeToSpawn();
+        }
+        
         
     }
 
