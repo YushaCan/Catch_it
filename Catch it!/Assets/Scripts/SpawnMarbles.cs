@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SpawnMarbles : MonoBehaviour
 {
-    public GameObject marblePrefab;
     private float spawnPosX = 2;
     private float spawnPosY = 6;
     private float spawnPosZ = -1.915f;
-    private float waitingTime = 1f;
+    private float waitingTime = 0.2f;
     private float localTime;
     public float globalTime;
     private void Start()
