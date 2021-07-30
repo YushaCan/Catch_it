@@ -12,7 +12,7 @@ public class PushOnSides : MonoBehaviour
         marbleRigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         PushMarble();
     }
@@ -21,10 +21,12 @@ public class PushOnSides : MonoBehaviour
 
         if(transform.position.x > xBound)
         {
+            Debug.Log("ONLINEEE");
             marbleRigidbody.AddForce(Vector3.left * forceSpeed, ForceMode.Impulse);
         }
         else if(transform.position.x < -xBound)
         {
+            Debug.Log("ONLINE SAGGGGG");
             marbleRigidbody.AddForce(Vector3.right * forceSpeed, ForceMode.Impulse);
         }
     }

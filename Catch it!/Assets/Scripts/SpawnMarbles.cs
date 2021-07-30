@@ -8,7 +8,7 @@ public class SpawnMarbles : MonoBehaviour
     private float spawnPosY = 6;
     private float spawnPosZ = -1.915f;
     private float waitingTime = 0.2f;
-    private float localTime;
+    public float localTime;
     public float globalTime;
     public GameManager gameManager;
     private void Start()

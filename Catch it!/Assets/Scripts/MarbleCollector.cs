@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MarbleCollector : MonoBehaviour
 {
-    public static int pickedMarbles = 0;
+    public int pickedMarbles = 0;
+    public int score = 0;
+    public int scoreConstant = 100;
     public GameManager gameManager;
     private void OnTriggerEnter(Collider other)
     {
@@ -12,8 +14,8 @@ public class MarbleCollector : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             pickedMarbles++;
+            score += (pickedMarbles * scoreConstant);
             Debug.Log("Picked Marbles ==> " + pickedMarbles);
         }
-       
     }
 }
