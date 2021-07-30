@@ -56,12 +56,14 @@
     <Compile Include="Assets\Scripts\SpawnMarbles.cs" />
     <Compile Include="Assets\Scripts\BasketMovement.cs" />
     <Compile Include="Assets\Scripts\MarbleCollector.cs" />
+    <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\PushOnSides.cs" />
-    <Compile Include="Assets\Scripts\StayOnBounds.cs" />
     <Compile Include="Assets\Scripts\BasketDontGetAway.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\StayOnBounds.cs" />
+    <Compile Include="Assets\Scripts\HeartController.cs" />
+    <Compile Include="Assets\Scripts\ScoreCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
