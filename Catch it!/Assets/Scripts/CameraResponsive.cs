@@ -25,7 +25,7 @@ public class CameraResponsive : MonoBehaviour
 
         mainCamera.aspect = DeviceScreenAspect;
 
-        float camHeight = 100.0f * mainCamera.orthographicSize * 2.0f;
+        float camHeight = 100.0f * mainCamera.orthographicSize * 2.5f;
         float camWidth = camHeight * DeviceScreenAspect;
         Debug.Log("cam Height " + camHeight.ToString());
         Debug.Log("cam Width " + camWidth.ToString());
