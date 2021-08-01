@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\PushOnSides.cs" />
     <Compile Include="Assets\Scripts\BasketDontGetAway.cs" />
     <Compile Include="Assets\Scripts\CameraResponsive.cs" />
+    <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
