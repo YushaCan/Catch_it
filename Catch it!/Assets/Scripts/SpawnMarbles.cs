@@ -39,7 +39,7 @@ public class SpawnMarbles : MonoBehaviour
             marble.transform.position = spawnPos;
             marble.transform.rotation = marble.transform.rotation;
             marble.SetActive(true);
-        }    
+        }
     }
 
     public void TimeToSpawn()
