@@ -66,7 +66,6 @@
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
     <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
     <Compile Include="Assets\Scripts\SpawnObstacles.cs" />
-    <Compile Include="Assets\Scripts\Level Game Mode\GameOverController.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelGameModeDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
