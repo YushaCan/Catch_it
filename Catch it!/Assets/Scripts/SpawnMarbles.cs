@@ -11,6 +11,8 @@ public class SpawnMarbles : MonoBehaviour
     public float localTime;
     public float globalTime;
     public GameManager gameManager;
+    public LevelDesign Levels;
+    private int marbleCounter = 1;
     private void Start()
     {
         localTime = 0f;
@@ -20,8 +22,9 @@ public class SpawnMarbles : MonoBehaviour
     {
         globalTime += Time.deltaTime;
         localTime += Time.deltaTime;
-        if (!gameManager.gameOver)
+        if (!gameManager.gameOver && marbleCounter <= Levels.marbleAmountToCollect)
         {
+            
             TimeToSpawn();
         }
         
@@ -39,12 +42,23 @@ public class SpawnMarbles : MonoBehaviour
             marble.transform.position = spawnPos;
             marble.transform.rotation = marble.transform.rotation;
             marble.SetActive(true);
+            marbleCounter++;
         }
     }
 
     public void TimeToSpawn()
     {
-        if (localTime >= 3f && globalTime < 15)
+        if(localTime >= 2.5f)
+        {
+            StartCoroutine(Spawn());
+            Debug.Log("Marble Counter: " + marbleCounter);
+            localTime = 0f;
+        }
+        
+        
+        
+        
+        /*if (localTime >= 3f && globalTime < 15)
         {
             StartCoroutine(Spawn());
             localTime = 0f;
@@ -83,6 +97,6 @@ public class SpawnMarbles : MonoBehaviour
         {
             StartCoroutine(Spawn());
             localTime = 0f;
-        }
+        }*/
     }
 }

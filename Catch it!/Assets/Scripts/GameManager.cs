@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     public HeartController heart;
     public SpawnMarbles SpawnTime;
 
-    public Destroyer destroyer;
+    public TextMeshProUGUI collectText; 
+
+    public LevelDesign level;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
     public bool gameOver = false;
@@ -23,7 +25,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame 100100100100100100
     void Update()
     {
-        if (destroyer.gameOverCounter >= 3)
+        collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
+
+        if (score.pickedMarbles == level.marbleAmountToCollect)
         {
             gameOver = true;
             Debug.Log("GAME OVER!");
@@ -37,7 +41,6 @@ public class GameManager : MonoBehaviour
         
         score.score = 0;
         score.pickedMarbles = 0;
-        destroyer.gameOverCounter = 0;
         heart.heart1.SetActive(true);
         heart.heart2.SetActive(true);
         heart.heart3.SetActive(true);

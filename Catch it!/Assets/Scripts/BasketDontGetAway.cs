@@ -14,13 +14,13 @@ public class BasketDontGetAway : MonoBehaviour
     }
     void Update()
     {
-        if (transform.position.x < -bdr.left / 2.4f)
+        if (transform.position.x < -bdr.left / 2.5f)
         {
-            transform.position = new Vector3(-bdr.left / 2.4f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-bdr.left / 2.5f, transform.position.y, transform.position.z);
         }
-        else if (transform.position.x > bdr.right / 2.4f)
+        else if (transform.position.x > bdr.right / 2.5f)
         {
-            transform.position = new Vector3(bdr.right / 2.4f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(bdr.right / 2.5f, transform.position.y, transform.position.z);
         }
     }
 }

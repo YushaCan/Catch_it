@@ -18,34 +18,14 @@ public class PushOnSides : MonoBehaviour
     {
         RectOffset bdr;
         bdr = GUI.skin.button.border;
-        Debug.Log("Left: " + bdr.left + " Right: " + bdr.right);
 
-        if (transform.position.x > bdr.right / 2.5f)
+        if (transform.position.x > bdr.right / 2.6f)
         {
             marbleRigidbody.AddForce(Vector3.left * forceSpeed, ForceMode.Impulse);
         }
-        else if (transform.position.x < -bdr.left / 2.5f)
+        else if (transform.position.x < -bdr.left / 2.6f)
         {
             marbleRigidbody.AddForce(Vector3.right * forceSpeed, ForceMode.Impulse);
         }
     }
-
-/*
-    public void FixedUpdate()
-    {
-        PushMarble();
-    }
-    public void PushMarble()
-    {
-        
-        if(transform.position.x > xBound)
-        {
-            marbleRigidbody.AddForce(Vector3.left * forceSpeed, ForceMode.Impulse);
-        }
-        else if(transform.position.x < -xBound)
-        {
-            marbleRigidbody.AddForce(Vector3.right * forceSpeed, ForceMode.Impulse);
-        }
-    }
-*/
 }

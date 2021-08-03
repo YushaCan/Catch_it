@@ -55,15 +55,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SpawnMarbles.cs" />
     <Compile Include="Assets\Scripts\BasketMovement.cs" />
-    <Compile Include="Assets\Scripts\ScoreCounter.cs" />
-    <Compile Include="Assets\Scripts\MarbleCollector.cs" />
-    <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Infinity Game Mode\ScoreCounter.cs" />
+    <Compile Include="Assets\Scripts\Infinity Game Mode\MarbleCollector.cs" />
+    <Compile Include="Assets\Scripts\Infinity Game Mode\Destroyer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\HeartController.cs" />
+    <Compile Include="Assets\Scripts\Infinity Game Mode\HeartController.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\PushOnSides.cs" />
     <Compile Include="Assets\Scripts\BasketDontGetAway.cs" />
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
+    <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
+    <Compile Include="Assets\Scripts\SpawnObstacles.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\GameOverController.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\LevelGameModeDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
