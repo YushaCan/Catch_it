@@ -12,7 +12,7 @@ public class SpawnMarbles : MonoBehaviour
     public float globalTime;
     public GameManager gameManager;
     public LevelDesign Levels;
-    private int marbleCounter = 1;
+    public int marbleCounter = 1;
     private void Start()
     {
         localTime = 0f;
@@ -23,8 +23,7 @@ public class SpawnMarbles : MonoBehaviour
         globalTime += Time.deltaTime;
         localTime += Time.deltaTime;
         if (!gameManager.gameOver && marbleCounter <= Levels.marbleAmountToCollect)
-        {
-            
+        {          
             TimeToSpawn();
         }
         
