@@ -26,12 +26,11 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame 100100100100100100
     void Update()
     {
-        collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
+        collectText.text = score.pickedMarbles + "/" + level.marbleLooseCount;
 
-        if (levelGameMode.losingMarble >= 1)
+        if (levelGameMode.losingMarble > (level.marbleLooseCount - level.marbleAmountToCollect))
         {
             gameOver = true;
             Debug.Log("GAME OVER!");
