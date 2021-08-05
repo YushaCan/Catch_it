@@ -6,7 +6,8 @@ public class ObjectPooler : MonoBehaviour
 {
     public static ObjectPooler SharedInstance;
     public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
+    public GameObject normalMarble;
+    public GameObject blackMarble;
     public int amountToPool;
     private void Awake()
     {
@@ -18,9 +19,19 @@ public class ObjectPooler : MonoBehaviour
         GameObject tmp;
         for(int i = 0; i < amountToPool; i++)
         {
-            tmp = Instantiate(objectToPool);
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
+            if(i % 3 == 0)
+            {
+                tmp = Instantiate(normalMarble);
+                tmp.SetActive(false);
+                pooledObjects.Add(tmp);
+            }
+            else if(i % 2 == 0)
+            {
+                tmp = Instantiate(blackMarble);
+                tmp.SetActive(false);
+                pooledObjects.Add(tmp);
+            }
+            
         }
     }
     public GameObject GetPooledObject()

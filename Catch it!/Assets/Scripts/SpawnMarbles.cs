@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnMarbles : MonoBehaviour
 {
+    public MarbleCollector marbleCollector;
+
     private float spawnPosX = 2;
     private float spawnPosY = 6;
     private float spawnPosZ = -1.915f;
@@ -47,7 +49,13 @@ public class SpawnMarbles : MonoBehaviour
 
     public void TimeToSpawn()
     {
-        if(localTime >= 2.5f)
+        if(marbleCollector.speedUp == true && localTime >= 1f && globalTime < 3)
+        {
+            StartCoroutine(Spawn());
+            Debug.Log("Marble Counter: " + marbleCounter);
+            localTime = 0f;
+        }
+        else if(marbleCollector.speedUp == false && localTime >= 2f)
         {
             StartCoroutine(Spawn());
             Debug.Log("Marble Counter: " + marbleCounter);
