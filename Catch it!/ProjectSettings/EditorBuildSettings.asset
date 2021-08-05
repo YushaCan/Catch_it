@@ -6,21 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Infinity Game Mode.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 17ae84691f734404887c6ec2e29e91bd
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
-    guid: 269e518160c586c46a81eaa36965bc11
+    guid: 653efcf4ab69a2e41a5ca3e7e133a53a
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
-    guid: 9886249377caed14b96d7f5dd686649c
+    guid: 2495111cad164d844a7aa7543d130aad
   - enabled: 1
     path: Assets/Scenes/Level 4.unity
-    guid: f817583dd6e00914b848c1875cc111ea
+    guid: f2b5430be1d6bfc40a00f14d6854c94e
   - enabled: 1
     path: Assets/Scenes/Level 5.unity
-    guid: f40fd7b2e6663e4448c5cc32238e01b7
+    guid: e2fe8a6d238b7e94f87b3fc94c61b5a8
   m_configObjects: {}
