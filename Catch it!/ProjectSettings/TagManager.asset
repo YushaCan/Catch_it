@@ -9,6 +9,7 @@ TagManager:
   - Marble
   - RightEdge
   - LeftEdge
+  - BlackMarble
   layers:
   - Default
   - TransparentFX

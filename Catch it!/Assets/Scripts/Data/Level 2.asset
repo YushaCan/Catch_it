@@ -15,7 +15,7 @@ MonoBehaviour:
   obstacle: {fileID: 3806883261262481443, guid: 4b6a5a9cd38a598478baf4563e0c1baf, type: 3}
   marble: {fileID: 1843712013119345618, guid: 5820b10939dbf7e41b326123ec1956a7, type: 3}
   level: 2
-  marbleAmountToCollect: 1
+  marbleAmountToCollect: 19
   marbleLooseCount: 20
   spawnPoints:
   - {x: -2, y: 4, z: -1.8514}

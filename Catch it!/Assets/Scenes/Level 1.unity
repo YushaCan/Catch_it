@@ -594,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3a6e93305f15548bd5fcb2d559815d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marbleCollector: {fileID: 1147349380}
   localTime: 0
   globalTime: 0
   gameManager: {fileID: 515719307}
@@ -2437,10 +2438,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1961da457ff8b0d43822548d17be6781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedUp: 0
   pickedMarbles: 0
   score: 0
   scoreConstant: 100
   gameManager: {fileID: 515719307}
+  spawnMarbles: {fileID: 501992940}
 --- !u!1 &1202092466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,7 +2672,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31876
+  m_Name: pb_Mesh21824
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3620,8 +3623,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObjects: []
-  objectToPool: {fileID: 1843712013119345618, guid: 5820b10939dbf7e41b326123ec1956a7, type: 3}
-  amountToPool: 10
+  normalMarble: {fileID: 1843712013119345618, guid: 5820b10939dbf7e41b326123ec1956a7, type: 3}
+  blackMarble: {fileID: 1843712013119345618, guid: d38726004125f124381f6cdeb5ecb91e, type: 3}
+  amountToPool: 30
 --- !u!4 &2088759629
 Transform:
   m_ObjectHideFlags: 0
