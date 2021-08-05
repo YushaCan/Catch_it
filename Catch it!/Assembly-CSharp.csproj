@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Level Game Mode\LevelGameModeDestroyer.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\MarbleCollector.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\LevelMap.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\HeartController.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
@@ -67,7 +68,7 @@
     <Compile Include="Assets\Scripts\SpawnObstacles.cs" />
     <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
-    <Compile Include="Assets\Scripts\Level Game Mode\LevelMap.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\ColorChange.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
