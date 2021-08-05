@@ -22,7 +22,7 @@ public class SpawnMarbles : MonoBehaviour
     {
         globalTime += Time.deltaTime;
         localTime += Time.deltaTime;
-        if (!gameManager.gameOver && marbleCounter <= Levels.marbleAmountToCollect)
+        if (!gameManager.gameOver && marbleCounter <= Levels.marbleLooseCount)
         {          
             TimeToSpawn();
         }
