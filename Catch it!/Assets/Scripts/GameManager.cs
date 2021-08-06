@@ -27,11 +27,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        collectText.text = score.pickedMarbles + "/" + level.marbleLooseCount;
+        collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
 
-        if (levelGameMode.losingMarble > (level.marbleLooseCount - level.marbleAmountToCollect))
+        if (levelGameMode.losingMarble >= (level.marbleLooseCount - level.marbleAmountToCollect))
         {
             gameOver = true;
+            score.slowDown = false;
+            score.speedUp = false;
             restartButton.gameObject.SetActive(true);
             gameOverText.gameObject.SetActive(true);
 
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
+        spawnMarbles.randomNumbers.Clear();
         spawnMarbles.marbleCounter = 1;
         levelGameMode.losingMarble = 0;
         score.score = 0;
