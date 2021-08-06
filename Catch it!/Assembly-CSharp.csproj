@@ -66,11 +66,12 @@
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\PushOnSides.cs" />
     <Compile Include="Assets\Scripts\BasketDontGetAway.cs" />
+    <Compile Include="Assets\Scripts\Data\MarbleFeatures.cs" />
     <Compile Include="Assets\Scripts\SpawnObstacles.cs" />
     <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelChange.cs" />
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
-    <Compile Include="Assets\Scripts\Data\MarbleFeatures.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\DynamicListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -225,9 +226,6 @@
     <Reference Include="UnityEngine.UIModule">
       <HintPath>C:\Program Files\Unity\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>C:\Program Files\Unity\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UIElementsNativeModule">
       <HintPath>C:\Program Files\Unity\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsNativeModule.dll</HintPath>
     </Reference>
@@ -296,9 +294,6 @@
     </Reference>
     <Reference Include="UnityEditor.SceneTemplateModule">
       <HintPath>C:\Program Files\Unity\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UIElementsModule">
-      <HintPath>C:\Program Files\Unity\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UIElementsSamplesModule">
       <HintPath>C:\Program Files\Unity\Editor\2020.3.13f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
@@ -707,6 +702,30 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextCore">
+      <HintPath>Library\ScriptAssemblies\Unity.TextCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.UIElements.Editor.Text">
+      <HintPath>Library\ScriptAssemblies\Unity.UIElements.Editor.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextCore.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextCore.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsInputSystemModule">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsInputSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsGameObjectsModule">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsGameObjectsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.UIElements.Text">
+      <HintPath>Library\ScriptAssemblies\Unity.UIElements.Text.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
