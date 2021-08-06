@@ -5,6 +5,7 @@ using UnityEngine;
 public class MarbleCollector : MonoBehaviour
 {
     public bool speedUp = false;
+    public bool slowDown = false;
     public int pickedMarbles = 0;
     public int score = 0;
     public int scoreConstant = 100;
@@ -26,7 +27,17 @@ public class MarbleCollector : MonoBehaviour
             other.gameObject.SetActive(false);
             pickedMarbles++;
             score += (pickedMarbles * scoreConstant);
+            slowDown = false;
             speedUp = true;
+        }
+        else if (!gameManager.gameOver && other.gameObject.CompareTag("GreenMarble"))
+        {
+            spawnMarbles.globalTime = 0f;
+            other.gameObject.SetActive(false);
+            pickedMarbles++;
+            score += (pickedMarbles * scoreConstant);
+            speedUp = false;
+            slowDown = true;
         }
     }
 }
