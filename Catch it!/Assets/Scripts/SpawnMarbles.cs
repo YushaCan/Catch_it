@@ -6,6 +6,10 @@ public class SpawnMarbles : MonoBehaviour
 {
     public MarbleCollector marbleCollector;
 
+    public int randomSpawn;
+    public List<int> randomNumbers;
+    public bool match = false;
+
     private float spawnPosX = 2;
     private float spawnPosY = 6;
     private float spawnPosZ = -1.915f;
@@ -27,35 +31,86 @@ public class SpawnMarbles : MonoBehaviour
         if (!gameManager.gameOver && marbleCounter <= Levels.marbleLooseCount)
         {          
             TimeToSpawn();
+            
         }
-        
-        
+        if (gameManager.gameOver)
+        {
+            List<GameObject> marble = ObjectPooler.SharedInstance.GetPooledObject();
+            for(int i = 0; i < marble.Count; i++)
+            {
+                marble[i].SetActive(false);
+            }
+        }
     }
 
     public IEnumerator Spawn()
     {
         yield return new WaitForSeconds(waitingTime);
         Vector3 spawnPos = new Vector3(Random.Range(-spawnPosX, spawnPosX), spawnPosY, spawnPosZ);
-        //Instantiate(marblePrefab, spawnPos, marblePrefab.transform.rotation);
-        GameObject marble = ObjectPooler.SharedInstance.GetPooledObject();
-        if (marble != null)
+        List<GameObject> marble = ObjectPooler.SharedInstance.GetPooledObject();
+        randomSpawn = Random.Range(0, marble.Count);
+        MatchController();
+        randomNumbers.Add(randomSpawn);
+        
+        void MatchController()
         {
-            marble.transform.position = spawnPos;
-            marble.transform.rotation = marble.transform.rotation;
-            marble.SetActive(true);
+            for (int i = 0; i < randomNumbers.Count; i++)
+            {
+                if (randomNumbers[i] == randomSpawn)
+                {
+                    Debug.Log("NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN1");
+                    match = true;
+                    break;
+                }
+            }
+            if (match)
+            {
+                randomSpawn = Random.Range(0, marble.Count);
+                match = false;
+                MatchController();
+            }
+        }
+        
+        
+        if (marble != null && !match)
+        {
+            marble[randomSpawn].transform.position = spawnPos;
+            marble[randomSpawn].transform.rotation = marble[randomSpawn].transform.rotation;
+            marble[randomSpawn].SetActive(true);
             marbleCounter++;
         }
+
     }
 
     public void TimeToSpawn()
     {
-        if(marbleCollector.speedUp == true && localTime >= 1f && globalTime < 3)
+        //Takes Black Marble
+        if(marbleCollector.speedUp == true && marbleCollector.slowDown == false && localTime >= 0.75f && globalTime < 3)
         {
+            
             StartCoroutine(Spawn());
-            Debug.Log("Marble Counter: " + marbleCounter);
+            Debug.Log("BLACK MARBLE " + marbleCounter);
             localTime = 0f;
+            if (globalTime >= 2.5f)
+            {
+                marbleCollector.speedUp = false;
+            }
         }
-        else if(marbleCollector.speedUp == false && localTime >= 2f)
+        //Takes Green Marble
+        else if (marbleCollector.slowDown == true && marbleCollector.speedUp == false && localTime >= 3f && globalTime < 10)
+        {
+            
+            StartCoroutine(Spawn());
+            Debug.Log("GREEN MARBLE " + marbleCounter);
+            localTime = 0f;
+
+            if (globalTime >= 9f)
+            {
+                marbleCollector.slowDown = false;
+            }
+        }
+        //Takes Normal Marble
+        else if (marbleCollector.slowDown == false && marbleCollector.speedUp == false && localTime >= 1.75f)
         {
             StartCoroutine(Spawn());
             Debug.Log("Marble Counter: " + marbleCounter);
