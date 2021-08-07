@@ -16,13 +16,14 @@ public class GameManager : MonoBehaviour
     public LevelGameModeDestroyer levelGameMode;
     public SpawnMarbles spawnMarbles;
 
+    public TextMeshProUGUI levelText;
     public LevelDesign level;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
     public bool gameOver = false;
     void Start()
     {
-        
+        levelText.text = "Level " + level.level;
     }
 
     void Update()
