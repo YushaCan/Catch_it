@@ -4,22 +4,26 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class BasketMovement : MonoBehaviour
 {
-    public float swipeSpeed;
-    Vector3 lastMousePosition;
-    public GameManager gameManager;
-    private void OnMouseDown()
+    private Vector3 mOffset;
+    private float mYCoord;
+    void OnMouseDown()
     {
-        lastMousePosition = Input.mousePosition;
+        mYCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).y;
+        // Store offset = gameobject world pos - mouse world pos
+        mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
     }
-    private void OnMouseDrag()
+    private Vector3 GetMouseAsWorldPoint()
     {
-        if (!gameManager.gameOver)
-        {
-            Vector3 delta = Input.mousePosition - lastMousePosition;
-            Vector3 pos = transform.position;
-            pos.x += delta.x * swipeSpeed;
-            transform.position = pos;
-            lastMousePosition = Input.mousePosition;
-        }   
+        // Pixel coordinates of mouse (x,y)
+        Vector3 mousePoint = Input.mousePosition;
+        // y coordinate of game object on screen
+        mousePoint.y = mYCoord;
+        // Convert it to world points
+        return Camera.main.ScreenToWorldPoint(mousePoint);
     }
+    void OnMouseDrag()
+    {
+        transform.position = GetMouseAsWorldPoint() + mOffset;
+    }
+
 }
