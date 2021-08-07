@@ -31,7 +31,6 @@ public class SpawnMarbles : MonoBehaviour
         if (!gameManager.gameOver && marbleCounter <= Levels.marbleLooseCount)
         {          
             TimeToSpawn();
-            
         }
         if (gameManager.gameOver)
         {
@@ -91,10 +90,6 @@ public class SpawnMarbles : MonoBehaviour
             StartCoroutine(Spawn());
             Debug.Log("BLACK MARBLE " + marbleCounter);
             localTime = 0f;
-            if (globalTime >= 2.5f)
-            {
-                marbleCollector.speedUp = false;
-            }
         }
         //Takes Green Marble
         else if (marbleCollector.slowDown == true && marbleCollector.speedUp == false && localTime >= 3f && globalTime < 10)
@@ -102,12 +97,7 @@ public class SpawnMarbles : MonoBehaviour
             
             StartCoroutine(Spawn());
             Debug.Log("GREEN MARBLE " + marbleCounter);
-            localTime = 0f;
-
-            if (globalTime >= 9f)
-            {
-                marbleCollector.slowDown = false;
-            }
+            localTime = 0f;          
         }
         //Takes Normal Marble
         else if (marbleCollector.slowDown == false && marbleCollector.speedUp == false && localTime >= 1.75f)
@@ -115,50 +105,6 @@ public class SpawnMarbles : MonoBehaviour
             StartCoroutine(Spawn());
             Debug.Log("Marble Counter: " + marbleCounter);
             localTime = 0f;
-        }
-        
-        
-        
-        
-        /*if (localTime >= 3f && globalTime < 15)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if(localTime >= 2f && globalTime > 15 && globalTime < 35)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if (localTime >= 1.5f && globalTime > 35 && globalTime < 70)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if (localTime >= 1f && globalTime > 70 && globalTime < 130)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if (localTime >= 0.75f && globalTime > 130 && globalTime < 160)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if (localTime >= 0.5f && globalTime > 160 && globalTime < 190)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if (localTime >= 0.25f && globalTime > 190 && globalTime < 220)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }
-        else if (localTime >= 0.1f && globalTime > 220)
-        {
-            StartCoroutine(Spawn());
-            localTime = 0f;
-        }*/
+        }  
     }
 }
