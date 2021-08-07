@@ -16,7 +16,18 @@ public class MarbleCollector : MonoBehaviour
     {
         if (!gameManager.gameOver && other.gameObject.CompareTag("Marble"))
         {
-            
+            if (spawnMarbles.globalTime >= 10 && slowDown == true)
+            {
+                slowDown = false;
+                speedUp = false;
+                spawnMarbles.globalTime = 0;
+            }
+            else if (spawnMarbles.globalTime >= 2.5f && speedUp == true)
+            {
+                speedUp = false;
+                slowDown = false;
+                spawnMarbles.globalTime = 0;
+            }
             other.gameObject.SetActive(false);
             pickedMarbles++;
             score += (pickedMarbles * scoreConstant);
