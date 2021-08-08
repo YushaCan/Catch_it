@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Level Game Mode\LevelGameModeDestroyer.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\MarbleCollector.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\DynamicListView.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelMap.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\HeartController.cs" />
@@ -71,7 +72,7 @@
     <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelChange.cs" />
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
-    <Compile Include="Assets\Scripts\Level Game Mode\DynamicListView.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\Booster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -664,9 +665,6 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -675,9 +673,6 @@
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -703,8 +698,26 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIElementsInputSystemModule">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsInputSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.UIElements.Text">
+      <HintPath>Library\ScriptAssemblies\Unity.UIElements.Text.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextCore">
       <HintPath>Library\ScriptAssemblies\Unity.TextCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextCore.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextCore.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.UIElements.Editor.Text">
       <HintPath>Library\ScriptAssemblies\Unity.UIElements.Editor.Text.dll</HintPath>
@@ -712,20 +725,8 @@
     <Reference Include="UnityEngine.UIElementsModule">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UIElementsModule">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UIElementsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextCore.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextCore.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIElementsInputSystemModule">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsInputSystemModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UIElementsGameObjectsModule">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UIElementsGameObjectsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.UIElements.Text">
-      <HintPath>Library\ScriptAssemblies\Unity.UIElements.Text.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
