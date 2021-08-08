@@ -51,6 +51,11 @@ public class SpawnMarbles : MonoBehaviour
         MatchController();
         randomNumbers.Add(randomSpawn);
         
+        if(randomNumbers.Count == 25)
+        {
+            randomNumbers.Clear();
+        }
+        
         void MatchController()
         {
             for (int i = 0; i < randomNumbers.Count; i++)
