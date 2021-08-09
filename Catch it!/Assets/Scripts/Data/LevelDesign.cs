@@ -10,5 +10,7 @@ public class LevelDesign : ScriptableObject
     public int level;
     public int marbleAmountToCollect;
     public int marbleLooseCount;
+    public int sizeBooster;
+    public int funnelBooster;
     public Vector3[] spawnPoints;
 }
