@@ -16,7 +16,9 @@ MonoBehaviour:
   marble: {fileID: 1843712013119345618, guid: 5820b10939dbf7e41b326123ec1956a7, type: 3}
   level: 1
   marbleAmountToCollect: 10
-  marbleLooseCount: 12
+  marbleLooseCount: 15
+  sizeBooster: 1
+  funnelBooster: 1
   spawnPoints:
   - {x: -2, y: 4, z: -1.8514}
   - {x: -2.2000003, y: 3.3, z: -1.8514}
