@@ -4,26 +4,41 @@ using UnityEngine;
 
 public class Booster : MonoBehaviour
 {
-    
-    public int boosterAmount = 2;
-    public float time;
+    public LevelDesign level;
+    public int sizeBoosterAmount;
+    public int funnelBoosterAmount;
+    Vector3 temp;
+    private int sizeBoosterTime = 5;
     private void Start()
     {
-        time = 0;
+        sizeBoosterAmount = level.sizeBooster;
+        funnelBoosterAmount = level.funnelBooster;
     }
-    private void Update()
+    public void UseSizeBooster()
     {
-        time += Time.deltaTime;
-    }
-    public void UseBooster()
-    {
-        if(boosterAmount > 0)
+        IEnumerator SizeBooster()
         {
-            Debug.Log("Size INCREASED");
-            //Vector3 local = collector.transform.localScale;
-            transform.localScale = new Vector3(5f, 2f, 2f);
-            //Vector3 world = collector.transform.lossyScale;
-            boosterAmount--;
+            temp = transform.localScale;
+            temp.x *= 2;
+            transform.localScale = temp;
+            sizeBoosterAmount--;
+            yield return new WaitForSeconds(sizeBoosterTime);
+            temp.x /= 2;
+            transform.localScale = temp;
         }
+
+        if (sizeBoosterAmount > 0)
+        {
+            Debug.Log("SIZE INCREASED");
+            StartCoroutine(SizeBooster());
+
+        }
+    } 
+
+    public void UseFunnelBooster()
+    {
+
     }
+    
 }
+
