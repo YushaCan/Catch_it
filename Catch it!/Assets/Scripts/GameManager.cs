@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     public LevelGameModeDestroyer levelGameMode;
     public SpawnMarbles spawnMarbles;
 
+    public Booster booster;
+
+    public TextMeshProUGUI sizeBoosterAmountText;
+    public TextMeshProUGUI funnelBoosterAmountText;
+
     public TextMeshProUGUI levelText;
     public LevelDesign level;
     public TextMeshProUGUI gameOverText;
@@ -24,11 +29,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         levelText.text = "Level " + level.level;
+
     }
 
     void Update()
     {
         collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
+        sizeBoosterAmountText.text = "x" + booster.sizeBoosterAmount;
+        funnelBoosterAmountText.text = "x" + booster.funnelBoosterAmount;
 
         if (levelGameMode.losingMarble >= (level.marbleLooseCount - level.marbleAmountToCollect))
         {
@@ -49,6 +57,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
+        booster.sizeBoosterAmount = level.sizeBooster;
         spawnMarbles.randomNumbers.Clear();
         spawnMarbles.marbleCounter = 1;
         levelGameMode.losingMarble = 0;
