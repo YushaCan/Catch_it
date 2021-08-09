@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     public MarbleCollector score;
     public SpawnMarbles SpawnTime;
 
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     public LevelGameModeDestroyer levelGameMode;
     public SpawnMarbles spawnMarbles;
 
+    public FunnelBooster funnelBooster;
     public Booster booster;
 
     public TextMeshProUGUI sizeBoosterAmountText;
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
         sizeBoosterAmountText.text = "x" + booster.sizeBoosterAmount;
-        funnelBoosterAmountText.text = "x" + booster.funnelBoosterAmount;
+        funnelBoosterAmountText.text = "x" + funnelBooster.funnelBoosterAmount;
 
         if (levelGameMode.losingMarble >= (level.marbleLooseCount - level.marbleAmountToCollect))
         {
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
 
         if (score.pickedMarbles == level.marbleAmountToCollect)
         {
+            level.isLevelCompleted = true;
             gameOver = true;          
             nextLevelButton.gameObject.SetActive(true);
             nextLevelText.gameObject.SetActive(true);          
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
+        funnelBooster.funnelBoosterAmount = level.funnelBooster;
         booster.sizeBoosterAmount = level.sizeBooster;
         spawnMarbles.randomNumbers.Clear();
         spawnMarbles.marbleCounter = 1;
