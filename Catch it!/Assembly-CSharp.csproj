@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelChange.cs" />
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\FunnelBooster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
