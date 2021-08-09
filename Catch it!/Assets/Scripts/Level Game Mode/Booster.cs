@@ -6,13 +6,13 @@ public class Booster : MonoBehaviour
 {
     public LevelDesign level;
     public int sizeBoosterAmount;
-    public int funnelBoosterAmount;
+
     Vector3 temp;
     private int sizeBoosterTime = 5;
     private void Start()
     {
         sizeBoosterAmount = level.sizeBooster;
-        funnelBoosterAmount = level.funnelBooster;
+
     }
     public void UseSizeBooster()
     {
@@ -31,14 +31,7 @@ public class Booster : MonoBehaviour
         {
             Debug.Log("SIZE INCREASED");
             StartCoroutine(SizeBooster());
-
         }
     } 
-
-    public void UseFunnelBooster()
-    {
-
-    }
-    
 }
 
