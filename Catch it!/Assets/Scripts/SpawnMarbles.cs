@@ -62,7 +62,6 @@ public class SpawnMarbles : MonoBehaviour
             {
                 if (randomNumbers[i] == randomSpawn)
                 {
-                    Debug.Log("NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN1");
                     match = true;
                     break;
                 }

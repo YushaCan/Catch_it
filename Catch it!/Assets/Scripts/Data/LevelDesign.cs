@@ -9,7 +9,7 @@ public class LevelDesign : ScriptableObject
     public GameObject obstacle;
     public GameObject marble;
     
-    public GameObject image;
+    public Image image;
     public bool isLevelCompleted = false;
     
     public int level;

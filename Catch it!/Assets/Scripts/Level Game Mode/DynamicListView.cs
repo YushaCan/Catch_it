@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using System;
 public class DynamicListView : MonoBehaviour
 {
     public Transform listItemHolder;
-    //public int numOfListItems;
-    public List<GameObject> images;
+    public List<Image> images;
     public List<LevelDesign> levels;
     public GameManager gameManager;
     private void Start()
@@ -16,5 +17,14 @@ public class DynamicListView : MonoBehaviour
             Instantiate(levels[i].image, listItemHolder);
             images.Add(levels[i].image);
         }
+    }
+    public void ChangeColor()
+    {
+
+        if (levels[0].isLevelCompleted == true)
+        {
+           
+        }
+
     }
 }

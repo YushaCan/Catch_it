@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 3806883261262481443, guid: 4b6a5a9cd38a598478baf4563e0c1baf, type: 3}
   marble: {fileID: 1843712013119345618, guid: 5820b10939dbf7e41b326123ec1956a7, type: 3}
-  image: {fileID: 3541613078268545666, guid: 561297b1fbf36f04ca1694feb03ba742, type: 3}
+  image: {fileID: 4087635233597655861, guid: 561297b1fbf36f04ca1694feb03ba742, type: 3}
   isLevelCompleted: 0
   level: 4
   marbleAmountToCollect: 40

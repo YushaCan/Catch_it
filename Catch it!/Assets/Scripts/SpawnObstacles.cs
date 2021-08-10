@@ -17,7 +17,7 @@ public class SpawnObstacles : MonoBehaviour
         float x = 2.2f;
         float y = 4f;
         float z = -1.8514f;
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 8; i++)
         { 
             for(int j = 0; j < 8; j++)
             {

@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Infinity Game Mode\MarbleCollector.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\Booster.cs" />
     <Compile Include="Assets\Scripts\Infinity Game Mode\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Level Game Mode\FunnelBooster.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\DynamicListView.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelMap.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="Assets\Scripts\Data\LevelDesign.cs" />
     <Compile Include="Assets\Scripts\Level Game Mode\LevelChange.cs" />
     <Compile Include="Assets\Scripts\ObstacleResponsive.cs" />
-    <Compile Include="Assets\Scripts\Level Game Mode\FunnelBooster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -89,11 +89,13 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

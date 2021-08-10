@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BasketDontGetAway : MonoBehaviour
 {
-    //private float xBound = 2.1f;
-
     private RectOffset bdr;
 
     private void OnGUI()
