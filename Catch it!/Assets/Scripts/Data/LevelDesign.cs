@@ -8,7 +8,9 @@ public class LevelDesign : ScriptableObject
 {
     public GameObject obstacle;
     public GameObject marble;
-    
+
+    public static bool isPaused = false;
+
     public Image image;
     public bool isLevelCompleted = false;
     
