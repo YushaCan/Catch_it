@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public FunnelBooster funnelBooster;
     public Booster booster;
 
+    public Button sizeBoosterButton;
+    public Button funnelBoosterButton;
     public TextMeshProUGUI sizeBoosterAmountText;
     public TextMeshProUGUI funnelBoosterAmountText;
 
@@ -39,7 +41,9 @@ public class GameManager : MonoBehaviour
         collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
         sizeBoosterAmountText.text = "x" + booster.sizeBoosterAmount;
         funnelBoosterAmountText.text = "x" + funnelBooster.funnelBoosterAmount;
-
+        
+        PausedIsActive();
+        
         if (levelGameMode.losingMarble >= (level.marbleLooseCount - level.marbleAmountToCollect))
         {
             gameOver = true;
@@ -72,5 +76,22 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         restartButton.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(false);
+    }
+    public void PausedIsActive()
+    {
+        if(LevelDesign.isPaused == true)
+        {
+            sizeBoosterButton.gameObject.SetActive(false);
+            funnelBoosterButton.gameObject.SetActive(false);
+            levelText.gameObject.SetActive(false);
+            collectText.gameObject.SetActive(false);
+        }
+        else if(LevelDesign.isPaused == false)
+        {
+            sizeBoosterButton.gameObject.SetActive(true);
+            funnelBoosterButton.gameObject.SetActive(true);
+            levelText.gameObject.SetActive(true);
+            collectText.gameObject.SetActive(true);
+        }
     }
 }
