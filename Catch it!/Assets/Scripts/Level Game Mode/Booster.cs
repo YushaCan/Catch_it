@@ -6,6 +6,8 @@ public class Booster : MonoBehaviour
 {
     public LevelDesign level;
     public int sizeBoosterAmount;
+    
+    private bool isUse = false;
 
     Vector3 temp;
     private int sizeBoosterTime = 5;
@@ -15,8 +17,10 @@ public class Booster : MonoBehaviour
     }
     public void UseSizeBooster()
     {
+        
         IEnumerator SizeBooster()
         {
+            isUse = true;
             temp = transform.localScale;
             temp.x *= 2;
             transform.localScale = temp;
@@ -24,9 +28,10 @@ public class Booster : MonoBehaviour
             yield return new WaitForSeconds(sizeBoosterTime);
             temp.x /= 2;
             transform.localScale = temp;
+            isUse = false;
         }
 
-        if (sizeBoosterAmount > 0)
+        if (sizeBoosterAmount > 0 && isUse == false)
         {
             Debug.Log("SIZE INCREASED");
             StartCoroutine(SizeBooster());
