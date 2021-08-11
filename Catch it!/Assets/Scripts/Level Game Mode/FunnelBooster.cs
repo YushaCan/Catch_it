@@ -12,8 +12,6 @@ public class FunnelBooster : MonoBehaviour
         funnelBoosterAmount = level.funnelBooster;
         gameObject.SetActive(false);
     }
-
-
     public void UseFunnelBooster()
     {
         IEnumerator FunnelBooster()

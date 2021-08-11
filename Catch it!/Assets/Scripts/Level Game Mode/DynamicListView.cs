@@ -18,13 +18,4 @@ public class DynamicListView : MonoBehaviour
             images.Add(levels[i].image);
         }
     }
-    public void ChangeColor()
-    {
-
-        if (levels[0].isLevelCompleted == true)
-        {
-           
-        }
-
-    }
 }

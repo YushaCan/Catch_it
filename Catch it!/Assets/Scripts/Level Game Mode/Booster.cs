@@ -12,7 +12,6 @@ public class Booster : MonoBehaviour
     private void Start()
     {
         sizeBoosterAmount = level.sizeBooster;
-
     }
     public void UseSizeBooster()
     {
