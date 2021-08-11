@@ -19,11 +19,14 @@ public class SpawnMarbles : MonoBehaviour
     public GameManager gameManager;
     public LevelDesign Levels;
     public int marbleCounter = 1;
+
     private void Start()
     {
         localTime = 0f;
         globalTime = 0f;
     }
+
+
     void FixedUpdate()
     {
         globalTime += Time.deltaTime;
@@ -35,7 +38,7 @@ public class SpawnMarbles : MonoBehaviour
         if (gameManager.gameOver)
         {
             List<GameObject> marble = ObjectPooler.SharedInstance.GetPooledObject();
-            for(int i = 0; i < marble.Count; i++)
+            for (int i = 0; i < marble.Count; i++)
             {
                 marble[i].SetActive(false);
             }
@@ -87,6 +90,7 @@ public class SpawnMarbles : MonoBehaviour
 
     public void TimeToSpawn()
     {
+
         //Takes Black Marble
         if(marbleCollector.speedUp == true && marbleCollector.slowDown == false && localTime >= 0.75f && globalTime < 3)
         {

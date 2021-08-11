@@ -11,6 +11,7 @@ public class ObjectPooler : MonoBehaviour
     private void Awake()
     {
         SharedInstance = this;
+
     }
     private void Start()
     {
