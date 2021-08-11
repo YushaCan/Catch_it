@@ -156,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 604198937}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96, y: -1826}
-  m_SizeDelta: {x: 112.8247, y: 123.4609}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -114, y: 100}
+  m_SizeDelta: {x: 112.8247, y: 123.46094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111843783
 MonoBehaviour:
@@ -1435,6 +1435,8 @@ MonoBehaviour:
   spawnMarbles: {fileID: 501992940}
   funnelBooster: {fileID: 1182242313}
   booster: {fileID: 622304326}
+  sizeBoosterButton: {fileID: 1421058786}
+  funnelBoosterButton: {fileID: 1264877691}
   sizeBoosterAmountText: {fileID: 1853241987}
   funnelBoosterAmountText: {fileID: 738281732}
   levelText: {fileID: 1254085045}
@@ -1494,8 +1496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0025959015, y: -1032.3}
-  m_SizeDelta: {x: 1004.4, y: 2064.6}
+  m_AnchoredPosition: {x: -0.00053596, y: -960}
+  m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &604198938
 MonoBehaviour:
@@ -4583,7 +4585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1606196574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4796,6 +4798,7 @@ GameObject:
   - component: {fileID: 1673926801}
   - component: {fileID: 1673926803}
   - component: {fileID: 1673926802}
+  - component: {fileID: 1673926805}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -4819,7 +4822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.000038358576}
+  m_AnchoredPosition: {x: 0, y: 0.00002745792}
   m_SizeDelta: {x: 1080, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1673926802
@@ -4860,6 +4863,30 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &1673926805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673926800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d571dd642c6c09e4db052f076508bfd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageToChangeColors: []
+  levels:
+  - {fileID: 11400000, guid: c4eaa1e133464034181f10e24fe531ec, type: 2}
+  - {fileID: 11400000, guid: 1d868b7fdc3a1664389543613029ce1d, type: 2}
+  - {fileID: 11400000, guid: 8d46e09470552b94b98bd00ee9243a68, type: 2}
+  - {fileID: 11400000, guid: 3c4518d09d1dd834d82bf0c3cbc3fd9b, type: 2}
+  - {fileID: 11400000, guid: abb48ca4799fdda4ebca945a4a397519, type: 2}
+  - {fileID: 11400000, guid: f374c556eb17f0045832e8a5715f1ae6, type: 2}
+  - {fileID: 11400000, guid: b837cd6c2bf2b3b4caef67d488a8a4b2, type: 2}
+  - {fileID: 11400000, guid: ef6463694bf0add40b2e343d56487bdc, type: 2}
+  - {fileID: 11400000, guid: 145a776c285530b4caa0ba271e8871c2, type: 2}
+  - {fileID: 11400000, guid: d1bf091463fa3b04aaf61fc411bc9469, type: 2}
 --- !u!1 &1763157325
 GameObject:
   m_ObjectHideFlags: 0
