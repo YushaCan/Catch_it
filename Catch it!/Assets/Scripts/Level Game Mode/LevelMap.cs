@@ -20,7 +20,8 @@ public class LevelMap : MonoBehaviour
         pauseButton.SetActive(true);
         //marbleCollectText.SetActive(true);
         Time.timeScale = 1f;
-        gameIsPaused = false;
+        //gameIsPaused = false;
+        LevelDesign.isPaused = false;
     }
     public void Pause() 
     {
@@ -28,6 +29,7 @@ public class LevelMap : MonoBehaviour
         pauseButton.SetActive(false);
         //marbleCollectText.SetActive(false);
         Time.timeScale = 0f;
-        gameIsPaused = true;
+        //gameIsPaused = true;
+        LevelDesign.isPaused = true;
     }
 }
