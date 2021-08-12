@@ -9,7 +9,6 @@ public class DynamicListView : MonoBehaviour
     public Transform listItemHolder;
     public List<Image> images;
     public List<LevelDesign> levels;
-    public GameManager gameManager;
     private void Start()
     {
         for(int i = 0; i < levels.Count; i++)

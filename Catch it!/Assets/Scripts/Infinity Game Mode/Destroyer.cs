@@ -8,7 +8,6 @@ public class Destroyer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.gameObject.SetActive(false);
-        gameOverCounter++;
-        Debug.Log("FALLING MARBLES: " + gameOverCounter);    
+        gameOverCounter++; 
     }
 }

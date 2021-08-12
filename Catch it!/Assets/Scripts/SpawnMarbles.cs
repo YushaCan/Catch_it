@@ -96,7 +96,6 @@ public class SpawnMarbles : MonoBehaviour
         {
             
             StartCoroutine(Spawn());
-            Debug.Log("BLACK MARBLE " + marbleCounter);
             localTime = 0f;
         }
         //Takes Green Marble
@@ -104,14 +103,12 @@ public class SpawnMarbles : MonoBehaviour
         {
             
             StartCoroutine(Spawn());
-            Debug.Log("GREEN MARBLE " + marbleCounter);
             localTime = 0f;          
         }
         //Takes Normal Marble
         else if (marbleCollector.slowDown == false && marbleCollector.speedUp == false && localTime >= 1.75f)
         {
             StartCoroutine(Spawn());
-            Debug.Log("Marble Counter: " + marbleCounter);
             localTime = 0f;
         }  
     }

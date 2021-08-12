@@ -30,7 +30,6 @@ public class FunnelBooster : MonoBehaviour
         if (funnelBoosterAmount > 0 && isUsed == false)
         {
             gameObject.SetActive(true);
-            Debug.Log("FUNNEL APPEARED");
             StartCoroutine(FunnelBooster());
 
         }

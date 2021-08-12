@@ -33,7 +33,6 @@ public class Booster : MonoBehaviour
 
         if (sizeBoosterAmount > 0 && isUse == false)
         {
-            Debug.Log("SIZE INCREASED");
             StartCoroutine(SizeBooster());
         }
     } 
