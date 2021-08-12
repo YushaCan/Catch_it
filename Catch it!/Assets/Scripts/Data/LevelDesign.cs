@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class LevelDesign : ScriptableObject
 {
     public GameObject obstacle;
-    public GameObject marble;
 
     public static bool isPaused = false;
+
+    public static bool isGameOver = false; // DENEME
+
 
     public Image image;
     public bool isLevelCompleted = false;
