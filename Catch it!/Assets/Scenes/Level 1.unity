@@ -774,7 +774,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18208
+  m_Name: pb_Mesh18214
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1496,8 +1496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00053596, y: -960}
-  m_SizeDelta: {x: 1080, y: 1920}
+  m_AnchoredPosition: {x: 0.00022125, y: -1073.9956}
+  m_SizeDelta: {x: 1115.4, y: 2208.15}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &604198938
 MonoBehaviour:
@@ -1663,7 +1663,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622304313}
-  m_Mesh: {fileID: 1026670791}
+  m_Mesh: {fileID: 967309186}
 --- !u!23 &622304316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2036,7 +2036,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1026670791}
+  m_Mesh: {fileID: 967309186}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3395,13 +3395,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1026670791
+--- !u!43 &967309186
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18094
+  m_Name: pb_Mesh18100
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4385,7 +4385,7 @@ GameObject:
   - component: {fileID: 1518916704}
   m_Layer: 5
   m_Name: PauseButton
-  m_TagString: Untagged
+  m_TagString: PAUSE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4693,7 +4693,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef6463694bf0add40b2e343d56487bdc, type: 2}
   - {fileID: 11400000, guid: 145a776c285530b4caa0ba271e8871c2, type: 2}
   - {fileID: 11400000, guid: d1bf091463fa3b04aaf61fc411bc9469, type: 2}
-  gameManager: {fileID: 515719307}
 --- !u!114 &1606196579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4709,6 +4708,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 604198936}
   pauseButton: {fileID: 1518916702}
   resumeButton: {fileID: 111843781}
+  dynamicListView: {fileID: 1606196578}
 --- !u!114 &1606196580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6076,7 +6076,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2088759629}
   - component: {fileID: 2088759628}
-  - component: {fileID: 2088759630}
   m_Layer: 0
   m_Name: ObjectPooler
   m_TagString: Untagged
@@ -6098,9 +6097,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjects: []
   marbles:
-  - {fileID: 1843712013119345618, guid: 5820b10939dbf7e41b326123ec1956a7, type: 3}
-  - {fileID: 1843712013119345618, guid: d38726004125f124381f6cdeb5ecb91e, type: 3}
-  - {fileID: 1843712013119345618, guid: c163f69f17d105a48b9d313682dbf993, type: 3}
+  - {fileID: 2401289423729246267, guid: 424e74f26bbbd4143a46712ee6663eb5, type: 3}
+  - {fileID: 2401289423729246267, guid: 5777ab29a2c1b4f42a853c05954e8312, type: 3}
+  - {fileID: 2401289423729246267, guid: c0af33015d710bd489541888f32b9c5a, type: 3}
   amountToPool: 30
 --- !u!4 &2088759629
 Transform:
@@ -6116,18 +6115,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2088759630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088759627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6376c1f3a720842b395d214790fed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &2118570472
 Mesh:
   m_ObjectHideFlags: 0

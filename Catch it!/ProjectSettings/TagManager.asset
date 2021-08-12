@@ -11,6 +11,7 @@ TagManager:
   - LeftEdge
   - BlackMarble
   - GreenMarble
+  - PAUSE
   layers:
   - Default
   - TransparentFX
