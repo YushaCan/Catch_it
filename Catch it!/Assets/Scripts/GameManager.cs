@@ -30,10 +30,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
     public bool gameOver = false;
+
     void Start()
     {
+        LevelDesign.isGameOver = false;
         levelText.text = "Level " + level.level;
-
     }
 
     void Update()
@@ -46,20 +47,23 @@ public class GameManager : MonoBehaviour
         
         if (levelGameMode.losingMarble >= (level.marbleLooseCount - level.marbleAmountToCollect))
         {
+            LevelDesign.isGameOver = true; 
+
             gameOver = true;
             score.slowDown = false;
             score.speedUp = false;
             restartButton.gameObject.SetActive(true);
             gameOverText.gameObject.SetActive(true);
-
         }
 
         if (score.pickedMarbles == level.marbleAmountToCollect)
         {
+            LevelDesign.isGameOver = true; 
+
             level.isLevelCompleted = true;
             gameOver = true;          
             nextLevelButton.gameObject.SetActive(true);
-            nextLevelText.gameObject.SetActive(true);          
+            nextLevelText.gameObject.SetActive(true);
         }
     }
     public void RestartGame()
@@ -76,17 +80,19 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         restartButton.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(false);
+
+        LevelDesign.isGameOver = false;
     }
     public void PausedIsActive()
     {
-        if(LevelDesign.isPaused == true)
+        if (LevelDesign.isPaused == true)
         {
             sizeBoosterButton.gameObject.SetActive(false);
             funnelBoosterButton.gameObject.SetActive(false);
             levelText.gameObject.SetActive(false);
             collectText.gameObject.SetActive(false);
         }
-        else if(LevelDesign.isPaused == false)
+        else if (LevelDesign.isPaused == false)
         {
             sizeBoosterButton.gameObject.SetActive(true);
             funnelBoosterButton.gameObject.SetActive(true);
