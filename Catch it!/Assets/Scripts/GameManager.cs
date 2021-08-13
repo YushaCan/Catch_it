@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameOverAd gameOverAd;
 
     public MarbleCollector score;
     public SpawnMarbles SpawnTime;
@@ -31,8 +32,10 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
     public bool gameOver = false;
 
+    public static bool isLevelPassed = false; //DENEME
     void Start()
     {
+        isLevelPassed = false;
         LevelDesign.isGameOver = false;
         levelText.text = "Level " + level.level;
     }
@@ -47,8 +50,17 @@ public class GameManager : MonoBehaviour
         
         if (levelGameMode.losingMarble >= (level.marbleLooseCount - level.marbleAmountToCollect))
         {
-            LevelDesign.isGameOver = true; 
-
+            LevelDesign.isGameOver = true;
+            
+            //ADD SHOWS UP AND CLOSE AUTOMATÝCALLY WHEN USER DECIDED TO WATCH IT
+            if(GameOverAd.closeAd == false)
+            {
+                gameOverAd.gameObject.SetActive(true);
+            }
+            else{
+                gameOverAd.gameObject.SetActive(false);
+            }
+            ////////////////////////////////////////////
             gameOver = true;
             score.slowDown = false;
             score.speedUp = false;
@@ -58,7 +70,8 @@ public class GameManager : MonoBehaviour
 
         if (score.pickedMarbles == level.marbleAmountToCollect)
         {
-            LevelDesign.isGameOver = true; 
+            LevelDesign.isGameOver = true;
+            isLevelPassed = true;
 
             level.isLevelCompleted = true;
             gameOver = true;          
@@ -68,6 +81,8 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
+        GameOverAd.closeAd = false;
+        GameOverAd.haveEarned = true;
         funnelBooster.funnelBoosterAmount = level.funnelBooster;
         booster.sizeBoosterAmount = level.sizeBooster;
         spawnMarbles.randomNumbers.Clear();
