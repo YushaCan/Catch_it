@@ -43,8 +43,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         collectText.text = score.pickedMarbles + "/" + level.marbleAmountToCollect;
-        sizeBoosterAmountText.text = "x" + booster.sizeBoosterAmount;
-        funnelBoosterAmountText.text = "x" + funnelBooster.funnelBoosterAmount;
+        sizeBoosterAmountText.text = "x" + level.sizeBooster;
+        funnelBoosterAmountText.text = "x" + level.funnelBooster;
         
         PausedIsActive();
         
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         {
             LevelDesign.isGameOver = true;
             
-            //ADD SHOWS UP AND CLOSE AUTOMATÝCALLY WHEN USER DECIDED TO WATCH IT
+            //GAME OVER ADD SHOWS UP AND CLOSE AUTOMATÝCALLY WHEN USER DECIDED TO WATCH IT
             if(GameOverAd.closeAd == false)
             {
                 gameOverAd.gameObject.SetActive(true);
@@ -72,7 +72,11 @@ public class GameManager : MonoBehaviour
         {
             LevelDesign.isGameOver = true;
             isLevelPassed = true;
+            //INTERSTITIAL AD HERE
 
+          
+
+            ///////////////////////////////
             level.isLevelCompleted = true;
             gameOver = true;          
             nextLevelButton.gameObject.SetActive(true);
@@ -81,10 +85,11 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
+        Gift.watchedAdAmount = 0;
         GameOverAd.closeAd = false;
         GameOverAd.haveEarned = true;
-        funnelBooster.funnelBoosterAmount = level.funnelBooster;
-        booster.sizeBoosterAmount = level.sizeBooster;
+        level.funnelBooster = 1;
+        level.sizeBooster = 1;
         spawnMarbles.randomNumbers.Clear();
         spawnMarbles.marbleCounter = 1;
         levelGameMode.losingMarble = 0;

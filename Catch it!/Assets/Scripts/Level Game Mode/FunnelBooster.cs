@@ -8,7 +8,7 @@ public class FunnelBooster : MonoBehaviour
 
     private bool isUsed = false;
    
-    public int funnelBoosterAmount;
+    public int funnelBoosterAmount = 1;
     private float funnelBoosterTime = 10f;
     private void Start()
     {
@@ -21,13 +21,13 @@ public class FunnelBooster : MonoBehaviour
         IEnumerator FunnelBooster()
         {
             isUsed = true;
-            funnelBoosterAmount--;
+            level.funnelBooster--;
             yield return new WaitForSeconds(funnelBoosterTime);
             gameObject.SetActive(false);
             isUsed = false;
         }
 
-        if (funnelBoosterAmount > 0 && isUsed == false)
+        if (level.funnelBooster > 0 && isUsed == false)
         {
             gameObject.SetActive(true);
             StartCoroutine(FunnelBooster());

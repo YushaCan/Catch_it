@@ -5,7 +5,7 @@ using UnityEngine;
 public class Booster : MonoBehaviour
 {
     public LevelDesign level;
-    public int sizeBoosterAmount;
+    public int sizeBoosterAmount = 1;
     
     private bool isUse = false;
 
@@ -24,14 +24,14 @@ public class Booster : MonoBehaviour
             temp = transform.localScale;
             temp.x *= 2;
             transform.localScale = temp;
-            sizeBoosterAmount--;
+            level.sizeBooster--;
             yield return new WaitForSeconds(sizeBoosterTime);
             temp.x /= 2;
             transform.localScale = temp;
             isUse = false;
         }
 
-        if (sizeBoosterAmount > 0 && isUse == false)
+        if (level.sizeBooster > 0 && isUse == false)
         {
             StartCoroutine(SizeBooster());
         }
