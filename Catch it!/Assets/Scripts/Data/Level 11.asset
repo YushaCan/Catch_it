@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f55dac659fb2444aba099267e5e2d7, type: 3}
+  m_Name: Level 11
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 3806883261262481443, guid: 4b6a5a9cd38a598478baf4563e0c1baf, type: 3}
+  image: {fileID: 4087635233597655861, guid: 561297b1fbf36f04ca1694feb03ba742, type: 3}
+  isLevelCompleted: 0
+  level: 11
+  marbleAmountToCollect: 110
+  marbleLooseCount: 120
+  sizeBooster: 4
+  funnelBooster: 4
+  spawnPoints:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
