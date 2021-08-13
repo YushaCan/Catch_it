@@ -17,7 +17,7 @@ MonoBehaviour:
   isLevelCompleted: 1
   level: 1
   marbleAmountToCollect: 10
-  marbleLooseCount: 13
+  marbleLooseCount: 11
   sizeBooster: 2
   funnelBooster: 2
   spawnPoints:

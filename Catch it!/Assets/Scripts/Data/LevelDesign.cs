@@ -10,7 +10,7 @@ public class LevelDesign : ScriptableObject
 
     public static bool isPaused = false;
 
-    public static bool isGameOver = false; // DENEME
+    public static bool isGameOver = false; 
 
 
     public Image image;
