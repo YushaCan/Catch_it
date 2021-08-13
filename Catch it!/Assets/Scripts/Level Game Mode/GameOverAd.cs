@@ -23,6 +23,14 @@ public class GameOverAd : MonoBehaviour
             timerText.text = "AD Begins In " + time;
             yield return new WaitForSeconds(1);        
         }
+
+        //REWARDED AD IS HERE
+
+
+
+
+        /////////////////////
+        
         if(time == 0 && haveEarned)
         {
             closeAd = true;

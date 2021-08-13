@@ -16,7 +16,7 @@ MonoBehaviour:
   image: {fileID: 4087635233597655861, guid: 561297b1fbf36f04ca1694feb03ba742, type: 3}
   isLevelCompleted: 0
   level: 2
-  marbleAmountToCollect: 20
+  marbleAmountToCollect: 23
   marbleLooseCount: 24
   sizeBooster: 1
   funnelBooster: 1
