@@ -16,10 +16,10 @@ MonoBehaviour:
   image: {fileID: 4087635233597655861, guid: 561297b1fbf36f04ca1694feb03ba742, type: 3}
   isLevelCompleted: 0
   level: 2
-  marbleAmountToCollect: 23
+  marbleAmountToCollect: 20
   marbleLooseCount: 24
-  sizeBooster: 1
-  funnelBooster: 1
+  sizeBooster: 0
+  funnelBooster: 0
   spawnPoints:
   - {x: -2, y: 4, z: -1.8514}
   - {x: -2.2000003, y: 3.3, z: -1.8514}

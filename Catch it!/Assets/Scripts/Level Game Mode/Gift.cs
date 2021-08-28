@@ -7,6 +7,11 @@ public class Gift : MonoBehaviour
     public LevelDesign level;
     private int randomBooster;
     public static int watchedAdAmount= 0;
+
+    private void Start()
+    {
+        watchedAdAmount = 0;
+    }
     public void GetGift()
     {
         if(watchedAdAmount < 2)
